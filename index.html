@@ -55,6 +55,7 @@ setTimeout(mieruca, 500); document.readyState != "complete" ? (window.attachEven
         // Block DOM parsing to delay the DOMContentLoaded event
         while (performance.now() - start < delay) {
             // Busy-wait to simulate the delay
+            console.log(document.readyState);
         }
 
         document.addEventListener('DOMContentLoaded', function() {
