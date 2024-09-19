@@ -47,12 +47,14 @@ setTimeout(mieruca, 500); document.readyState != "complete" ? (window.attachEven
 </script>
 <!-- End Mieruca Embed Code -->
     <script>
+        console.log(document.readyState);
         // Simulate a delay before DOMContentLoaded event by blocking DOM parsing
         const delay = 5000; // 5-second delay
         const start = performance.now();
         
         // Block DOM parsing to delay the DOMContentLoaded event
         while (performance.now() - start < delay) {
+            console.log(document.readyState);
             // Busy-wait to simulate the delay
         }
 
