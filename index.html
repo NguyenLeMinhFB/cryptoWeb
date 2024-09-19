@@ -56,8 +56,8 @@ setTimeout(mieruca, 500); document.readyState != "complete" ? (window.attachEven
         window.addEventListener('load', function() {
             // Delay the loading of large data to simulate 5-second delay
             const delay = 5000;
-            const start = new Date().getTime();
-            while (new Date().getTime() - start < delay) {
+            const start = performance.now();
+            while ((performance.now() - start) < delay) {
                 // Blocking code to simulate long loading time
             }
         });
