@@ -46,6 +46,22 @@ setTimeout(mieruca, 500); document.readyState != "complete" ? (window.attachEven
 })();
 </script>
 <!-- End Mieruca Embed Code -->
+    <script>
+        // Simulate delay in DOM loading by creating artificial blocking
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOMContentLoaded event fired');
+        });
+
+        // Add artificial delay for DOM processing
+        window.addEventListener('load', function() {
+            // Delay the loading of large data to simulate 5-second delay
+            const delay = 5000;
+            const start = new Date().getTime();
+            while (new Date().getTime() - start < delay) {
+                // Blocking code to simulate long loading time
+            }
+        });
+    </script>
 </head>
 
 <body>
